@@ -3,6 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+a{
+    text-decoration: none;
+}
 header{
     display: flex;
     justify-content: space-between;
@@ -46,6 +49,7 @@ header a{
 }
 .burger-area{
     display: flex;
+    gap: 0.;
 }
 .burger{
     height: 1rem;
@@ -53,6 +57,8 @@ header a{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: transparent;
+    border: none;
 }
 .burger span{
     background-color: #ffffff;
@@ -252,11 +258,43 @@ form button:hover{
     border-top: 1px solid;
 }
 
+.footer-top{
+    background-color: #333333;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 11rem;
+    
+    
+}
+.footer-top nav{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    
+    padding: 1rem 0;
+}
+.footer-top nav a{
+    color: #ffffff;
+    text-decoration: none;
+}
+.footer-top nav a:hover{
+    text-decoration: underline;
+}
+.footer-bottom{
+    height: 5rem;
+    display: grid;
+    place-items: center;
+}
+.footer-bottom p a{
+    color: #008CBA;
+}
+
+
 
 
 @media  screen and (width < 785px) {
     body{
-        width: 100vw;
+        width: 100%;
     }
     .header-search-container{
         display: none;
@@ -276,6 +314,9 @@ form button:hover{
     }
     .search-container{
         padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 11rem;
     }
     
     form{
@@ -289,6 +330,23 @@ form button:hover{
     }
     .booking-area{
         padding: 0 1rem;
+        width: 100%;
     }
+    .footer-top{
+        padding:  1rem;
+        flex-direction: column;
+    }
+    .footer-top nav{
+        flex-direction: column;
+        padding: 0 ;
+        margin-bottom: 2rem;
+        gap: 0.3rem;
+    }
+    .open{
+        display: block;
+
+    }
+
+    
 
 }
